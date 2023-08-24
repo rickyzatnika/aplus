@@ -15,3 +15,30 @@ body {
     display: none;
   }
 }
+
+/* FOOTER */
+.target {
+  width: 100%;
+  font-weight: bold;
+  animation: rightToLeft 42s linear infinite;
+
+  /* animation: rightToLeft 4.5s linear infinite; */
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(400%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+/* FOOTER END*/
+
+@media (max-width: 520px) {
+  .target {
+    animation: rightToLeft 16s linear infinite;
+
+    /* animation: rightToLeft 4.5s linear infinite; */
+  }
+}
