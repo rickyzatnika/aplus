@@ -22,17 +22,17 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={` px-8 py-5 w-full  fixed top-0 left-0 flex items-center justify-between  ${scroll ? "bg-[#121212] transition-all duration-300 ease-linear" : "transition-all duration-300 ease-linear"}  `}>
+      <nav className={` px-8 py-5 w-full z-50 fixed top-0 left-0 flex items-center justify-between  ${scroll ? "bg-[#121212] transition-all duration-300 ease-linear" : "transition-all duration-300 ease-linear"}  `}>
         <div className="relative z-50 flex flex-col items-center justify-center">
           <Link href="/" className="flex items-center">
             <Image alt="" src={`${scroll ? "/logo_red.png" : "/logo.png"}`} width={40} height={40} className="object-cover" />
             <h1 className="text-zinc-100 uppercase text-xl">Aplus</h1>
           </Link>
         </div>
-        <ul className=" px-12 hidden lg:relative py-3 rounded-full bg-white lg:flex gap-8">
+        <ul className={`${scroll ? "bg-white text-zinc-500" : "bg-transparent text-white"}  px-12 hidden lg:relative py-3 rounded-full lg:flex gap-8 `}>
           <li className="flex items-center justify-center">
             <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
-              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease text-zinc-500">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">About Us</span>
                 <span className="text-sm">About Us</span>
               </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
           </li>
           <li className="flex items-center justify-center">
             <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
-              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease text-zinc-500">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Project</span>
                 <span className="text-sm">Project</span>
               </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
           </li>
           <li className="flex items-center justify-center">
             <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
-              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease text-zinc-500">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Portfolio</span>
                 <span className="text-sm">Portfolio</span>
               </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
           </li>
           <li className="flex items-center justify-center">
             <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
-              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease text-zinc-500">
+              <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Contact Us</span>
                 <span className="text-sm">Contact Us</span>
               </div>
