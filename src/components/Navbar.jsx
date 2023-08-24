@@ -28,7 +28,7 @@ const Navbar = () => {
       <ContactForm openForm={openForm} setOpenForm={setOpenForm} />
       <header>
         <nav className={` px-6 lg:px-8 py-5 w-full z-50 fixed top-0 left-0 flex items-center justify-between  ${scroll ? "bg-[#121212] transition-all duration-300 ease-linear" : "transition-all duration-300 ease-linear"}  `}>
-          <div className="relative z-50 flex flex-col items-center justify-center">
+          <div onClick={() => setOpen(false)} className="relative z-50 flex flex-col items-center justify-center">
             <Link href="/" className="flex items-center">
               <Image alt="" src={`${scroll ? "/logo_red.png" : "/logo.png"}`} width={40} height={40} className="object-cover" />
               <h1 className="text-zinc-100 uppercase text-xl">Aplus</h1>
@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <NavMobile open={open} setOpen={setOpen} />
+          <NavMobile open={open} setOpen={setOpen} openForm={openForm} setOpenForm={setOpenForm} />
           <div div className="flex items-center gap-4">
             <button onClick={() => setOpenForm(true)} className={`btc_container ${scroll ? "bg-gradient-to-r from-red-500 to-orange-500 text-zinc-100  transition-all duration-200 ease-linear" : "bg-white"} group px-4 py-2 bg-white rounded-full  flex items-center justify-center`}>
               <div className="group overflow-hidden h-[22px]">
