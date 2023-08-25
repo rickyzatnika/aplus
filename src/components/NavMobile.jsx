@@ -19,7 +19,7 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
             <Link href="/about">About Us</Link>
           </li>
           <li onClick={() => setOpen(false)} >
-            <Link href="/project">Project</Link>
+            <Link href="/project">Services</Link>
           </li>
           <li onClick={() => setOpen(false)} >
             <Link href="/portfolio">Portfolio</Link>

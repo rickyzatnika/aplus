@@ -19,7 +19,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 180);
+      setScroll(window.scrollY > 600);
     })
   }, []);
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     <>
       <ContactForm openForm={openForm} setOpenForm={setOpenForm} />
       <header>
-        <nav className={` px-6 lg:px-8 py-5 w-full z-50 fixed top-0 left-0 flex items-center justify-between  ${scroll ? "bg-[#121212] transition-all duration-300 ease-linear" : "transition-all duration-300 ease-linear"}  `}>
+        <nav className={` px-6 lg:px-8 py-5 w-full z-50 fixed top-0 left-0 flex items-center justify-between transition-all duration-300 ease-linear ${scroll ? "bg-[#000]/80 backdrop-blur" : "bg-transparent "}  `}>
           <div onClick={() => setOpen(false)} className="relative z-50 flex flex-col items-center justify-center">
             <Link href="/" className="flex items-center">
               <Image alt="" src={`${scroll ? "/logo_red.png" : "/logo.png"}`} width={40} height={40} className="object-cover" />
@@ -44,10 +44,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="flex items-center justify-center">
-              <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
+              <Link href="/services" className="group overflow-hidden h-[22px] px-2 ">
                 <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
-                  <span className="text-sm">Project</span>
-                  <span className="text-sm">Project</span>
+                  <span className="text-sm">Services</span>
+                  <span className="text-sm">Services</span>
                 </div>
               </Link>
             </li>
@@ -70,9 +70,9 @@ const Navbar = () => {
           </ul>
           <NavMobile open={open} setOpen={setOpen} openForm={openForm} setOpenForm={setOpenForm} />
           <div div className="flex items-center gap-4">
-            <button onClick={() => setOpenForm(true)} className={`btc_container ${scroll ? "bg-gradient-to-r from-red-500 to-orange-500 text-zinc-100  transition-all duration-200 ease-linear" : "bg-white"} group px-4 py-2 bg-white rounded-full  flex items-center justify-center`}>
+            <button onClick={() => setOpenForm(true)} className={`btn_container overflow-hidden relative ${scroll ? "bg-gradient-to-r from-red-500 to-orange-500 text-zinc-100  transition-all duration-200 ease-linear" : "bg-white"} group px-4 py-2 bg-white rounded-full  flex items-center justify-center`}>
               <div className="group overflow-hidden h-[22px]">
-                <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-200 ease-linear">
+                <div className="group-hover:text-zinc-100 relative z-20 flex flex-col items-center group-hover:-translate-y-5 transition-all duration-200 ease-linear">
                   <span className="text-sm">
                     + Become a Client</span>
                   <span className="text-sm">

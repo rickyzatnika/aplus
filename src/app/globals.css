@@ -10,8 +10,25 @@ body {
   height: 400vh;
 }
 
+.btn_container::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: linear-gradient(374deg, red, orange);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left;
+  border-radius: 50px;
+  transition: all 0.3s linear;
+  z-index: 0;
+}
+.btn_container:hover::after {
+  width: 100%;
+}
+
 @media (max-width: 369px) {
-  .btc_container {
+  .btn_container {
     display: none;
   }
 }
