@@ -1,14 +1,15 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
   return (
-    <div className="w-full h-auto lg:min-h-screen px-4 lg:px-8 py-8 bg-black">
+    <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-8 bg-black overflow-hidden">
       <div className="w-full h-full">
         <span className="text-zinc-400 text-[18px]">01 — About Us</span>
         <p className="border-b-2 font-bold tracking-wide border-zinc-500 pb-3 text-[24px] md:text-[28px] lg:text-[36px] text-zinc-400 w-full  pt-4">
           We Strive to Innovate
         </p>
-        <div className='flex flex-wrap items-center '>
+        <div className='w-full h-full flex flex-wrap flex-col lg:flex-row items-start justify-center '>
           <div className='flex-auto lg:flex-1 '>
             <p className='text-zinc-400 py-24'>Solid Strategy aligned with business needs and robust data analysis are fundamental ingredients to extract actionable insights</p>
             <div>
@@ -49,7 +50,17 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className='flex-auto lg:flex-1  text-white'>2</div>
+          <div className='w-full h-full hidden sm:relative flex-auto lg:flex lg:flex-1  text-white '>
+            <div>
+              <Image src="/1.png" alt="" width={350} height={350} className="absolute right-10 top-40" />
+            </div>
+            <div>
+              <Image src="/2.png" alt="" width={350} height={350} className="absolute left-24 top-44" />
+            </div>
+            <div>
+              <Image src="/3.png" alt="" width={250} height={250} className="absolute -right-16 top-60 " />
+            </div>
+          </div>
         </div>
       </div>
     </div>
