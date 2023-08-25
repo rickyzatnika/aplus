@@ -7,10 +7,10 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative z-50 flex flex-col pt-14 gap-0  items-center justify-between ">
-      <div className="footer bg-[#161616] py-14 p-8 text-base-content">
+    <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
+      <div className="footer bg-[#161616] py-12 lg:py-20 p-8 text-base-content">
         <div className="flex flex-col">
-          <Image src="/logo.png" alt='' width={100} height={100} className='object-cover mx-auto' />
+          <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover mx-auto' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
             Aplus Multi Kreasi are a creative agency in the marketing spehere that focuses on Event, Production and Branding.
           </p>

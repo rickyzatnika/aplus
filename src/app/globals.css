@@ -29,7 +29,7 @@
   }
 }
 
-/* FOOTER */
+/* Animate text*/
 .target {
   width: 100%;
   font-weight: bold;
@@ -46,11 +46,33 @@
     transform: translateX(-10%);
   }
 }
-/* FOOTER END*/
+
+.target_1 {
+  width: 100%;
+  font-weight: bold;
+  animation: LeftToRight 42s linear infinite;
+
+  /* animation: rightToLeft 4.5s linear infinite; */
+}
+
+@keyframes LeftToRight {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+/* Animate text END*/
 
 @media (max-width: 520px) {
   .target {
-    animation: rightToLeft 16s linear infinite;
+    animation: rightToLeft 22s linear infinite;
+
+    /* animation: rightToLeft 4.5s linear infinite; */
+  }
+  .target_1 {
+    animation: LeftToRight 22s linear infinite;
 
     /* animation: rightToLeft 4.5s linear infinite; */
   }

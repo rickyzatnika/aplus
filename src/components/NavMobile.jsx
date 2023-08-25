@@ -13,18 +13,25 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
   return (
     <>
       <nav className={`fixed w-full min-h-screen bg-[#131313] top-0 left-0 flex flex-col items-center justify-between gap-5 lg:hidden transition-all duration-300 ease-in-out ${open ? " text-white left-0" : "left-[-100%]"} `}>
-        <div></div>
+        <span></span>
         <ul className='gap-5 flex flex-col items-center text-xl'>
-          <li onClick={() => setOpen(false)} >
-            <Link href="/about">About Us</Link>
+          <li>
+            <button onClick={() => setOpen(false)}>
+              <Link href="/about">About Us</Link>
+            </button>
           </li>
-          <li onClick={() => setOpen(false)} >
-            <Link href="/project">Services</Link>
+          <li>
+            <button onClick={() => setOpen(false)} >
+
+              <Link href="/project">Services</Link>
+            </button>
           </li>
-          <li onClick={() => setOpen(false)} >
-            <Link href="/portfolio">Portfolio</Link>
+          <li>
+            <button onClick={() => setOpen(false)} >
+              <Link href="/portfolio">Portfolio</Link>
+            </button>
           </li>
-          <li  >
+          <li>
             <button onClick={() => setOpenForm(true)}>Contact Us</button>
           </li>
         </ul >

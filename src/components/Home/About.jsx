@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-8 bg-black overflow-hidden">
+    <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 bg-black overflow-hidden">
       <div className="w-full h-full">
         <span className="text-zinc-400 text-[18px]">01 — About Us</span>
         <p className="border-b-2 font-bold tracking-wide border-zinc-500 pb-3 text-[24px] md:text-[28px] lg:text-[36px] text-zinc-400 w-full  pt-4">
@@ -19,8 +19,7 @@ const About = () => {
                   <p className='text-4xl text-zinc-600 font-bold'>+250</p>
                   <p className='text-zinc-600 w-40 text-xs py-1 leading-relaxed'>We have successfully completed a total of 300+ projects</p>
                   <div className='absolute -right-4 -bottom-2  '>
-                    <video src="/dot.mp4" type="video/mp4" autoPlay muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
-
+                    <video src="/dot.mp4" type="video/mp4" autoPlay={true} muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
                   </div>
                 </div>
                 <div className='relative overflow-hidden  w-full h-[186px] rounded-3xl bg-gradient-to-tr from-zinc-100/90 to-zinc-50 p-5'>
@@ -52,13 +51,13 @@ const About = () => {
           </div>
           <div className='w-full h-full hidden sm:relative flex-auto lg:flex lg:flex-1  text-white '>
             <div>
-              <Image src="/1.png" alt="" width={350} height={350} className="absolute right-10 top-40" />
+              <Image src="/1.png" alt="image1" width={350} height={350} className="absolute right-10 top-40" />
             </div>
             <div>
-              <Image src="/2.png" alt="" width={350} height={350} className="absolute left-24 top-44" />
+              <Image src="/2.png" alt="image2" width={350} height={350} className="absolute left-24 top-44" />
             </div>
             <div>
-              <Image src="/3.png" alt="" width={250} height={250} className="absolute -right-16 top-60 " />
+              <Image src="/3.png" alt="image3" width={250} height={250} className="absolute -right-16 top-60 " />
             </div>
           </div>
         </div>
