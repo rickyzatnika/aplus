@@ -18,36 +18,32 @@ const About = () => {
                   <p className='text-4xl text-zinc-600 font-bold'>+250</p>
                   <p className='text-zinc-600 w-40 text-xs py-1 leading-relaxed'>We have successfully completed a total of 300+ projects</p>
                   <div className='absolute -right-4 -bottom-2  '>
-                    <video autoPlay loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40'>
-                      <source src="/dot.mp4" type='video/mp4' />
-                    </video>
+                    <video src="/dot.mp4" type="video/mp4" autoPlay muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
+
                   </div>
                 </div>
                 <div className='relative overflow-hidden  w-full h-[186px] rounded-3xl bg-gradient-to-tr from-zinc-100/90 to-zinc-50 p-5'>
                   <p className='text-4xl text-zinc-600 font-bold'>+10</p>
                   <p className='text-zinc-600 text-xs py-1 leading-relaxed'>Years experience</p>
                   <div className='absolute -right-4 -bottom-2  '>
-                    <video autoPlay loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40'>
-                      <source src="/clock.mp4" type='video/mp4' />
-                    </video>
+                    <video src="/clock.mp4" type="video/mp4" autoPlay muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
+
                   </div>
                 </div>
                 <div className='relative overflow-hidden  w-full h-[186px] rounded-3xl bg-gradient-to-tr from-zinc-100/90 to-zinc-50 p-5'>
                   <p className='text-4xl text-zinc-600 font-bold'>+150K</p>
                   <p className='text-zinc-600 w-44 text-xs py-1 leading-relaxed'>We’ve gathered dozens of reviews from the clients and + 100k reviews from their users</p>
                   <div className='absolute -right-4 -bottom-2  '>
-                    <video autoPlay loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40'>
-                      <source src="/peer.mp4" type='video/mp4' />
-                    </video>
+                    <video src="/peer.mp4" type="video/mp4" autoPlay muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
+
                   </div>
                 </div>
                 <div className='relative overflow-hidden  w-full h-[186px] rounded-3xl bg-gradient-to-tr from-zinc-100/90 to-zinc-50 p-5'>
                   <p className='text-4xl text-zinc-600 font-bold'>+90</p>
                   <p className='text-zinc-600 text-xs py-1 leading-relaxed'>Team members all over the city</p>
                   <div className='absolute -right-4 -bottom-2  '>
-                    <video autoPlay loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40'>
-                      <source src="/ball.mp4" type='video/mp4' />
-                    </video>
+                    <video src="/ball.mp4" type="video/mp4" autoPlay muted loop className='w-28 h-28 rounded-full shadow-xl shadow-black/40' />
+
                   </div>
                 </div>
               </div>
