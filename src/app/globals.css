@@ -6,10 +6,6 @@
   display: none !important;
 }
 
-body {
-  height: 400vh;
-}
-
 .btn_container::after {
   content: "";
   width: 0;
