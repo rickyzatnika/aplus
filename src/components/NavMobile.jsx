@@ -12,7 +12,7 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
 
   return (
     <>
-      <nav className={`fixed w-full min-h-full bg-[#131313] top-0 left-0 flex flex-col items-center justify-between gap-5 lg:hidden transition-all duration-300 ease-in-out ${open ? " text-white left-0" : "left-[-100%]"} `}>
+      <nav className={`fixed w-full min-h-screen bg-[#131313] top-0 left-0 flex flex-col items-center justify-between gap-5 lg:hidden transition-all duration-300 ease-in-out ${open ? " text-white left-0" : "left-[-100%]"} `}>
         <div></div>
         <ul className='gap-5 flex flex-col items-center text-xl'>
           <li onClick={() => setOpen(false)} >
