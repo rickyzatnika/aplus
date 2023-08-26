@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <>
       <ContactForm openForm={openForm} setOpenForm={setOpenForm} />
-      <div className={` px-6 lg:px-8 py-5 w-full z-50 fixed top-0 left-0 flex items-center justify-between transition-all duration-300 ease-linear ${scroll ? "bg-[#000]/80 backdrop-blur" : "bg-transparent "}  `}>
+      <div className={` px-6 lg:px-8 py-5 w-full z-[99] fixed top-0 left-0 flex items-center justify-between transition-all duration-300 ease-linear ${scroll ? "bg-[#000]/80 backdrop-blur" : "bg-transparent "}  `}>
         <button type="button" onClick={() => setOpen(false)} className="border-none outline-none relative z-50 flex flex-col items-center justify-center">
           <Link href="/" className="flex items-center">
             <Image alt="logo_aplus" src={`${scroll ? "/logo_red.png" : "/logo.png"}`} width={40} height={40} className="object-cover" />
@@ -51,7 +51,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
+            <Link href="/portfolio" className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Portfolio</span>
                 <span className="text-sm">Portfolio</span>
@@ -59,12 +59,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="/about" className="group overflow-hidden h-[22px] px-2 ">
+            <button onClick={() => setOpenForm(true)} className="group overflow-hidden h-[22px] px-2 ">
               <div className="flex flex-col items-center group-hover:-translate-y-5 transition-all duration-500 ease ">
                 <span className="text-sm">Contact Us</span>
                 <span className="text-sm">Contact Us</span>
               </div>
-            </Link>
+            </button>
           </li>
         </ul>
         <NavMobile open={open} setOpen={setOpen} openForm={openForm} setOpenForm={setOpenForm} />

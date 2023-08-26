@@ -82,7 +82,7 @@ const ContactForm = ({ openForm, setOpenForm }) => {
   }, [ref, setOpenForm]);
 
   return (
-    <div className={`${openForm ? "w-full opacity-100" : "w-0 opacity-0"} overflow-y-scroll min-h-screen w-0 bg-black/50 fixed right-0 origin-top-right backdrop-blur-sm  z-[99] transition-all duration-100 ease-linear `}>
+    <div className={`${openForm ? "w-full opacity-100" : "w-0 opacity-0"} overflow-y-scroll min-h-screen w-0 bg-black/50 fixed right-0 origin-top-right backdrop-blur-sm  z-[999] transition-all duration-100 ease-linear `}>
       <div ref={ref} className="relative  px-2 transition-all duration-300 overflow-y-scroll ease-linear w-[80%] lg:w-[50%] ml-auto bg-white min-h-screen">
         <div className='w-full h-full flex flex-col items-start justify-between '>
           <div className="relative flex item-start justify-between w-full px-4 py-3">

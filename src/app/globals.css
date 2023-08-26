@@ -6,6 +6,10 @@
   display: none !important;
 }
 
+body {
+  @apply bg-[#111];
+}
+
 .btn_container::after {
   content: "";
   width: 0;

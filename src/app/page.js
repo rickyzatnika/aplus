@@ -10,7 +10,7 @@ import { FaTiktok } from "react-icons/fa";
 import LightGallery from "lightgallery/react";
 import axios from "axios";
 import moment from "moment";
-import lgZoom from "lightgallery/plugins/zoom";
+
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section>
+      <section className="bg-white">
         <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
           <div className="w-full h-full">
             <span className="text-zinc-500 text-[18px]">02 — Our Services</span>
@@ -462,71 +462,89 @@ export default function Home() {
               ></span>
             </button>
           </div>
-          <LightGallery
-            speed={800}
-            plugins={[lgZoom]}
-            elementClassNames="w-full relative z-10 h-full columns-2 md:columns-3 gap-2 md:gap-6 px-3 md:px-12 py-8 md:py-20"
-          >
+          {isLoading && (
+            <div className="w-full h-full  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
+              <Image
+                src="/logo_merah.png"
+                width={100}
+                height={100}
+                priority={true}
+                alt="loading..."
+                className="mx-auto flex items-center justify-center"
+              />
+            </div>
+          )}
+          <div className="w-full columns-2 md:columns-3  gap-2 md:gap-6 px-3 md:px-12 py-8 md:py-20">
             {activeButton === "" ? (
               <>
                 {!isLoading &&
                   datas.map((g, i) => (
-                    <Link
+                    <LightGallery
+                      speed={800}
+                      elementClassNames="w-full relative z-10 h-full "
                       key={i}
-                      href={g.secure_url}
-                      passHref
-                      prefetch={true}
-                      data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
-                        g.created_at
-                      )
-                        .startOf("hour")
-                        .fromNow()}</p>`}
                     >
-                      <div className="md:w-96 h-full md:h-96 overflow-hidden">
-                        <Image
-                          className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear grayscale-0 lg:grayscale-[10] hover:grayscale-[0]  object-cover mb-6 mx-auto"
-                          src={g.secure_url}
-                          alt="image"
-                          placeholder="blur"
-                          blurDataURL={g.secure_url}
-                          width={1200}
-                          height={900}
-                        />
-                      </div>
-                    </Link>
+                      <Link
+                        href={g.secure_url}
+                        passHref
+                        prefetch={true}
+                        data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
+                          g.created_at
+                        )
+                          .startOf("hour")
+                          .fromNow()}</p>`}
+                      >
+                        <div className="md:w-96 h-full md:h-96 overflow-hidden">
+                          <Image
+                            className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear  object-cover mb-6 mx-auto"
+                            src={g.secure_url}
+                            alt="image"
+                            placeholder="blur"
+                            blurDataURL={g.secure_url}
+                            width={1200}
+                            height={900}
+                          />
+                        </div>
+                      </Link>
+                    </LightGallery>
                   ))}
               </>
             ) : (
               <>
                 {!isLoading &&
-                  data.map((g, i) => (
-                    <Link
+                  datas.map((g, i) => (
+                    <LightGallery
+                      speed={800}
+                      elementClassNames="w-full relative z-10 h-full "
                       key={i}
-                      href={g.secure_url}
-                      passHref
-                      prefetch={true}
-                      data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
-                        g.created_at
-                      )
-                        .startOf("hour")
-                        .fromNow()}</p>`}
                     >
-                      <div className="md:w-96 h-full md:h-96 overflow-hidden">
-                        <Image
-                          className="w-full md:w-96 hover:scale-x-110 transition-all duration-700 ease-linear grayscale-0 lg:grayscale-[10] hover:grayscale-[0] h-full md:h-96 object-cover mb-6 mx-auto"
-                          src={g.secure_url}
-                          alt="image"
-                          placeholder="blur"
-                          blurDataURL={g.secure_url}
-                          width={1200}
-                          height={900}
-                        />
-                      </div>
-                    </Link>
+                      <Link
+                        href={g.secure_url}
+                        passHref
+                        prefetch={true}
+                        data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
+                          g.created_at
+                        )
+                          .startOf("hour")
+                          .fromNow()}</p>`}
+                      >
+                        <div className="md:w-96 h-full md:h-96 overflow-hidden">
+                          <Image
+                            className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear  object-cover mb-6 mx-auto"
+                            src={g.secure_url}
+                            alt="image"
+                            placeholder="blur"
+                            blurDataURL={g.secure_url}
+                            width={1200}
+                            height={900}
+                          />
+                        </div>
+                      </Link>
+                    </LightGallery>
                   ))}
               </>
             )}
-          </LightGallery>
+          </div>
         </div>
       </section>
     </>
