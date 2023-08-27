@@ -10,7 +10,7 @@ import { FaTiktok } from "react-icons/fa";
 import LightGallery from "lightgallery/react";
 import axios from "axios";
 import moment from "moment";
-
+import { BsArrowRight } from "react-icons/bs";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
@@ -36,7 +36,7 @@ export default function Home() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=50`,
+          `${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=10`,
           {
             headers: {
               Authorization: `Basic ${auth}`,
@@ -55,8 +55,25 @@ export default function Home() {
     getGallery();
   }, [activeButton]);
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error)
+    return (
+      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
+        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
+        <div className="flex gap-2 items-center justify-center">
+          <span>Ups sorry something went wrong!</span>
+        </div>
+      </div>
+    );
+  if (!data)
+    return (
+      <div className="min-h-screen w-full flex flex-col gap-2 items-center justify-center text-white">
+        <Image src="/logo_merah.png" alt="logo" width={100} height={100} />
+        <div className="flex gap-2 items-center justify-center">
+          <span>Loading...</span>
+          <span className="loading loading-spinner loading-sm"></span>
+        </div>
+      </div>
+    );
 
   return (
     <>
@@ -68,9 +85,7 @@ export default function Home() {
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
               <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
-                <h1 className="text-lg lg:text-xl">
-                  APLUS MULTI KREASI COMPANY
-                </h1>
+                <h1 className="text-lg">APLUS MULTI KREASI COMPANY</h1>
                 <h3 className="text-5xl lg:text-7xl bg-gradient-to-tr tracking-wide lg:tracking-widest from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
                   inspiring partner
                 </h3>
@@ -80,7 +95,7 @@ export default function Home() {
                   through quality, trust and ease.
                 </p>
               </div>
-              <button className="px-6 py-2 bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md">
+              <button className="px-6 py-2 rounded-full bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md">
                 <Link href="/about">Read More</Link>
               </button>
             </div>
@@ -175,15 +190,23 @@ export default function Home() {
         <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-8 bg-black overflow-hidden">
           <div className="w-full h-full">
             <span className="text-zinc-400 text-[18px]">01 — About Us</span>
-            <p className="border-b-2 font-bold tracking-wide border-zinc-500 pb-3 text-[24px] md:text-[28px] lg:text-[36px] text-zinc-400 w-full  pt-4">
-              We Strive to Innovate
-            </p>
+            <div className="w-full border-b-2 border-zinc-500 pb-3 flex items-center justify-between">
+              <p className=" font-bold tracking-wide  text-[24px] md:text-[28px] lg:text-[36px] text-zinc-400 pt-4">
+                We Strive to Innovate
+              </p>
+              <Link href="/about">
+                <div className=" px-8 text-xl group transition-all duration-300 ease-linear flex-shrink text-zinc-400 flex items-center gap-1">
+                  About Us
+                  <BsArrowRight className="text-xl relative left-0 group-hover:left-4 transition-all duration-300 ease-linear" />
+                </div>
+              </Link>
+            </div>
             <div className="w-full h-full flex flex-wrap flex-col lg:flex-row items-start justify-center ">
               <div className="flex-auto lg:flex-1 ">
                 <p className="text-zinc-400 py-24">
-                  Solid Strategy aligned with business needs and robust data
-                  analysis are fundamental ingredients to extract actionable
-                  insights
+                  We are event and production management whose entire team works
+                  together to accomplish one mission, to create the equation
+                  through quality, trust and ease.
                 </p>
                 <div>
                   <p className="text-zinc-400 font-bold pb-3 px-2">
@@ -466,7 +489,7 @@ export default function Home() {
             </button>
           </div>
           {isLoading && (
-            <div className="w-full min-h-screen  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
+            <div className="w-full h-full flex flex-col gap-3 items-center justify-center z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
               <Image
                 src="/logo_merah.png"
                 width={100}
@@ -475,6 +498,10 @@ export default function Home() {
                 alt="loading..."
                 className="mx-auto flex items-center justify-center"
               />
+              <div className="flex gap-2 items-center justify-center">
+                <span>Loading...</span>
+                <span className="loading loading-spinner loading-sm"></span>
+              </div>
             </div>
           )}
           <div className="w-full columns-2 md:columns-3  gap-2 md:gap-6 px-3 md:px-12 py-8 md:py-20">

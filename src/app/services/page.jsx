@@ -57,7 +57,7 @@ const Services = () => {
               variants={slideInLeft}
               className="antialiased  col-span-1 lg:col-span-8 space-y-2 leading-relaxed"
             >
-              <h2 className="text-[#adadad] pb-2 text-xl lg:text-1xl  font-bold font-[Poppins]">
+              <h2 className="text-[#adadad] pb-2 text-xl lg:text-1xl  font-bold ">
                 OUR SERVICES
               </h2>
               <p className="textCustom font-bold text-5xl lg:text-6xl w-full lg:w-4/6 ">
@@ -68,7 +68,7 @@ const Services = () => {
               variants={slideInRight}
               className="col-span-1 lg:col-span-4  pb-8 relative top-8"
             >
-              <p className="text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
+              <p className="text-zinc-400 lg:text-zinc-600 relative top-0 lg:top-32 antialiased tracking-wide">
                 We focus on finding way to make life as easy as possible when planning an event and production. We always want to remind you that our team, is your team.
               </p>
             </motion.div>

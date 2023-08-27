@@ -88,9 +88,9 @@ body {
 /* Text Custom */
 .textCustom {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: rgb(175, 18, 18);
   -webkit-font-smoothing: antialiased;
-  color: rgb(175, 18, 18);
 }
 
 /* Background Path */
