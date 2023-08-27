@@ -39,10 +39,12 @@ const About = () => {
 
 
   return (
-    <section>
-      <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] overflow-hidden">
-        <div className="bg-path" />
-        <Image src="/logo.png" alt="logo" width={350} height={350} className="absolute opacity-10 left-32 lg:left-52 right-0 bottom-0" />
+    <section className="overflow-hidden">
+      <div className="w-full relative px-4 lg:px-14 py-24 lg:py-40  bg-[#171717] ">
+        <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+          <Image src="/logo_red.png" alt="logo" width={350} height={350} className="mix-blend-screen opacity-20 " />
+        </motion.div>
+        <div className="bg-path z-5" />
         <motion.div
           exit={{ opacity: 0 }}
           initial="initial"
@@ -63,13 +65,13 @@ const About = () => {
               </h3>
             </div>
           </motion.div>
-          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4 border-b pb-8 border-zinc-600 relative top-8">
+          <div className=" px-6 lg:px-3 col-span-1 lg:col-span-4  relative top-8">
             <div className="flex flex-col gap-4">
               <motion.div variants={slideInRight} className="leading-relaxed">
                 <h3 className="text-semibold text-xl text-zinc-200 font-extrabold uppercase tracking-widest mb-2">
                   Vision
                 </h3>
-                <p className="text-zinc-500 tracking-wide text-md leading-relaxed">
+                <p className="text-zinc-400 lg:text-zinc-500 tracking-wide text-md leading-relaxed">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dicta labore autem cum vero? Repellat perspiciatis reiciendis repellendus maiores ea?
                 </p>
               </motion.div>
@@ -82,7 +84,7 @@ const About = () => {
                 <h3 className="text-semibold text-xl text-zinc-100 font-extrabold lg:text-zinc-900  uppercase tracking-widest mb-2">
                   Mission
                 </h3>
-                <p className="text-zinc-500 tracking-wide text-md leading-relaxed">
+                <p className="text-zinc-400 lg:text-zinc-500 tracking-wide text-md leading-relaxed">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptates iure eligendi hic quo..
                 </p>
               </motion.div>
@@ -115,7 +117,7 @@ const About = () => {
       {/* Team Card */}
       <div className="py-14 px-4 w-full h-full">
         <div className="text-center ">
-          <h3 className="text-4xl text-zinc-200">— OUR PROFESSIONAL TEAM —</h3>
+          <h3 className="text-xl lg:text-4xl text-zinc-200">— OUR PROFESSIONAL TEAM —</h3>
           <p className="text-zinc-400 text-sm pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>

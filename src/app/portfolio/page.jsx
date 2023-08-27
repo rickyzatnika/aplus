@@ -86,8 +86,10 @@ const Portfolio = () => {
         animate="animate"
         className="w-full  py-24 lg:py-40 relative bg-[#171717] px-2 "
       >
+        <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+          <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-20 " />
+        </motion.div>
         <div className="bg-path" />
-        <Image src="/logo.png" alt="logo" width={350} height={350} className="absolute z-10 opacity-10 left-32 lg:left-52 right-0 bottom-0" />
         <div className="w-full relative lg:w-5/6 mb-20 grid grid-cols-1 lg:grid-cols-12 mx-auto items-center  px-2 ">
           <motion.div
             variants={slideInLeft}
@@ -190,14 +192,14 @@ const Portfolio = () => {
             </div>
           </div>
         )}
-        <div className="w-full columns-2 md:columns-3  gap-2 md:gap-6 px-3 md:px-12 py-8 md:py-20">
+        <div className="w-full h-full columns-2 md:columns-3  gap-2 md:gap-3 px-3 md:px-12 py-8 md:py-20">
           {activeButton === "" ? (
             <>
               {!isLoading &&
                 data.map((g, i) => (
                   <LightGallery
                     speed={800}
-                    elementClassNames="w-full relative z-10 h-full "
+                    elementClassNames="w-full relative mb-3 z-10 overflow-hidden "
                     key={i}
                   >
                     <Link
@@ -210,9 +212,9 @@ const Portfolio = () => {
                         .startOf("hour")
                         .fromNow()}</p>`}
                     >
-                      <div className="md:w-96 h-full md:h-96 overflow-hidden">
+                      <div className="w-full h-full  overflow-hidden">
                         <Image
-                          className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear  object-cover mb-6 mx-auto"
+                          className="w-full  h-full  hover:scale-110 transition-all duration-700 ease-linear  object-cover  mx-auto"
                           src={g.secure_url}
                           alt="image"
                           placeholder="blur"
@@ -231,7 +233,7 @@ const Portfolio = () => {
                 data.map((g, i) => (
                   <LightGallery
                     speed={800}
-                    elementClassNames="w-full relative z-10 h-full "
+                    elementClassNames="w-full overflow-hidden relative mb-3 z-10 h-full "
                     key={i}
                   >
                     <Link
@@ -244,9 +246,9 @@ const Portfolio = () => {
                         .startOf("hour")
                         .fromNow()}</p>`}
                     >
-                      <div className="md:w-96 h-full md:h-96 overflow-hidden">
+                      <div className="w-full h-full  overflow-hidden">
                         <Image
-                          className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear  object-cover mb-6 mx-auto"
+                          className="w-full h-full hover:scale-110 transition-all duration-700 ease-linear  object-cover  mx-auto"
                           src={g.secure_url}
                           alt="image"
                           placeholder="blur"

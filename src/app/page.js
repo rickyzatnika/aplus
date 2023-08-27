@@ -373,6 +373,13 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="w-fit mx-auto mt-8 ">
+            <Link href="/services">
+              <button className="border border-zinc-600  px-12 flex items-center justify-center py-2">
+                see more
+              </button>
+            </Link>
+          </div>
           <div className="absolute -bottom-1 left-0 -z-10 right-0 w-full h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
       </section>
@@ -504,14 +511,14 @@ export default function Home() {
               </div>
             </div>
           )}
-          <div className="w-full columns-2 md:columns-3  gap-2 md:gap-6 px-3 md:px-12 py-8 md:py-20">
+          <div className="w-full h-full columns-2 md:columns-3  gap-2 md:gap-3 px-3 md:px-12 py-8 md:py-20">
             {activeButton === "" ? (
               <>
                 {!isLoading &&
                   datas.map((g, i) => (
                     <LightGallery
                       speed={800}
-                      elementClassNames="w-full relative z-10 h-full "
+                      elementClassNames="w-full relative mb-3 z-10 overflow-hidden "
                       key={i}
                     >
                       <Link
@@ -524,9 +531,9 @@ export default function Home() {
                           .startOf("hour")
                           .fromNow()}</p>`}
                       >
-                        <div className="md:w-96 h-full md:h-96 overflow-hidden">
+                        <div className="w-full h-full  overflow-hidden">
                           <Image
-                            className="w-full md:w-96 h-full md:h-96 hover:scale-110 transition-all duration-700 ease-linear  object-cover mb-6 mx-auto"
+                            className="w-full  h-full  hover:scale-110 transition-all duration-700 ease-linear  object-cover  mx-auto"
                             src={g.secure_url}
                             alt="image"
                             placeholder="blur"
@@ -545,7 +552,7 @@ export default function Home() {
                   datas.map((g, i) => (
                     <LightGallery
                       speed={800}
-                      elementClassNames="w-full relative z-10 h-full "
+                      elementClassNames="w-full overflow-hidden relative mb-6 z-10 h-full "
                       key={i}
                     >
                       <Link

@@ -50,8 +50,10 @@ const Services = () => {
           animate="animate"
           className="w-full  py-24 lg:py-40 relative bg-[#171717] px-2 "
         >
+          <motion.div initial={{ y: 250 }} animate={{ y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="absolute z-10 left-28 lg:left-52 right-0 bottom-0 ">
+            <Image src="/logo.png" alt="logo" width={350} height={350} className="opacity-20 " />
+          </motion.div>
           <div className="bg-path" />
-          <Image src="/logo.png" alt="logo" width={350} height={350} className="absolute z-10 opacity-10 left-32 lg:left-52 right-0 bottom-0" />
           <div className="w-full relative lg:w-5/6 mb-20 grid grid-cols-1 lg:grid-cols-12 mx-auto items-center  px-2 ">
             <motion.div
               variants={slideInLeft}
