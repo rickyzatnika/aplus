@@ -19,7 +19,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 600);
+      setScroll(window.scrollY > 520);
     })
   }, []);
 

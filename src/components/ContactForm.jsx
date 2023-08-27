@@ -82,13 +82,14 @@ const ContactForm = ({ openForm, setOpenForm }) => {
   }, [ref, setOpenForm]);
 
   return (
-    <div className={`${openForm ? "w-full opacity-100" : "w-0 opacity-0"} overflow-y-scroll min-h-screen w-0 bg-black/50 fixed right-0 origin-top-right backdrop-blur-sm  z-[999] transition-all duration-100 ease-linear `}>
-      <div ref={ref} className="relative  px-2 transition-all duration-300 overflow-y-scroll ease-linear w-[80%] lg:w-[50%] ml-auto bg-white min-h-screen">
-        <div className='w-full h-full flex flex-col items-start justify-between '>
+    <div className={`${openForm ? "w-full opacity-100" : "w-0 opacity-0"} overflow-y-scroll max-h-screen w-0 bg-black/50 fixed right-0 origin-top-right backdrop-blur-sm  z-[999] transition-all duration-100 ease-linear `}>
+      <div ref={ref} className=" relative px-2 transition-all duration-300  ease-linear w-[80%] lg:w-[50%] ml-auto bg-white min-h-screen">
+        <div className='w-full  h-full flex flex-col items-start justify-between '>
           <div className="relative flex item-start justify-between w-full px-4 py-3">
             <h2 className='text-2xl md:text-3xl lg:text-5xl flex flex-col gap-2 font-bold'>
               Hey! Tell us <span>all the things</span>
             </h2>
+
             <button className="absolute top-8 right-6 text-xl" onClick={() => setOpenForm(!openForm)}><FaRegWindowClose className='hover:text-red-600' size={25} /></button>
           </div>
           <form onSubmit={handleContactForm} className='w-full  h-full py-4'>
@@ -123,7 +124,7 @@ const ContactForm = ({ openForm, setOpenForm }) => {
                 <textarea value={desc} onChange={(e) => setDesc(e.target.value)} placeholder='something about your great idea' className='bg-zinc-100 placeholder:text-sm placeholder:text-zinc-600 w-full focus:outline-none focus:border-none px-4 py-2' ></textarea>
               </div>
             </div>
-            <button type='submit' className='w-full mb-8 lg:mb-0 relative lg:absolute lg:w-max lg:right-8 right-0 bottom-2 px-8 py-4 text-zinc-100 bg-[#111] hover:bg-black rounded-full border-gray-500'>
+            <button type='submit' className='w-full mb-8 lg:mb-0 relative lg:absolute lg:w-max lg:right-8 right-0 -bottom-8 lg:bottom-2 px-8 py-4 text-zinc-100 bg-[#111] hover:bg-black rounded-full border-gray-500'>
               {!loading ? <span>Submit the request</span> : <span>sending request..</span>}
             </button>
           </form>

@@ -13,6 +13,7 @@
     "axios": "^1.4.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.17",
+    "framer-motion": "^7.5.3",
     "lightgallery": "^2.7.1",
     "moment": "^2.29.4",
     "mongoose": "^6.9.0",

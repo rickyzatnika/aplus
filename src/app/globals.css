@@ -51,6 +51,22 @@ body {
   }
 }
 
+.target1 {
+  width: 100%;
+
+  animation: leftToRight 18s linear infinite reverse;
+
+  /* animation: rightToLeft 4.5s linear infinite; */
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
 .target_1 {
   width: 100%;
   font-weight: bold;
@@ -69,6 +85,26 @@ body {
 }
 /* Animate text END*/
 
+/* Text Custom */
+.textCustom {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(175, 18, 18);
+}
+
+/* Background Path */
+.bg-path {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 65%;
+  height: 100%;
+  z-index: 0;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  background-color: #ffffff;
+}
+
 @media (max-width: 520px) {
   .target {
     animation: rightToLeft 22s linear infinite;
@@ -79,5 +115,9 @@ body {
     animation: LeftToRight 22s linear infinite;
 
     /* animation: rightToLeft 4.5s linear infinite; */
+  }
+  .bg-path {
+    height: 40%;
+    width: 40%;
   }
 }

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
+import AnimatePage from "@/components/AnimatePage/AnimatePage";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
@@ -19,9 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.className}`}>
         <ToastContainer theme="dark" />
-        <Navbar />
-        {children}
-        <Footer />
+        <AnimatePage>
+          <Navbar />
+          {children}
+          <Footer />
+        </AnimatePage>
       </body>
     </html>
   );

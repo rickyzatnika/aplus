@@ -55,9 +55,6 @@ export default function Home() {
     getGallery();
   }, [activeButton]);
 
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <>
       {/* Header */}
@@ -68,13 +65,16 @@ export default function Home() {
           <div className="w-full relative z-30 grid grid-cols-1 lg:grid-cols-12 ">
             <div className="col-span-1 lg:col-span-10 py-20 px-4 lg:py-32 lg:px-12">
               <div className="flex pb-8 leading-loose flex-col w-full  item-center justify-center gap-3 text-zinc-100">
-                <h1 className="text-lg lg:text-xl">Multicreation Company</h1>
+                <h1 className="text-lg lg:text-xl">
+                  APLUS MULTI KREASI COMPANY
+                </h1>
                 <h3 className="text-5xl lg:text-7xl bg-gradient-to-tr tracking-wide lg:tracking-widest from-red-600 to-orange-500 bg-clip-text text-transparent font-extrabold uppercase">
                   inspiring partner
                 </h3>
-                <p className="w-full lg:w-[60%] leading-loose text-lg lg:text-xl ">
-                  Aplus Multicreation are a creative agency in the marketing
-                  sphere that focuses on Event, Production and Branding.
+                <p className="w-full lg:w-[60%] leading-relaxed text-md lg:text-lg ">
+                  We are event and production management whose entire team works
+                  together to accomplish one mission, to create the equation
+                  through quality, trust and ease.
                 </p>
               </div>
               <button className="px-6 py-2 bg-gradient-to-tr from-red-600 to-orange-500 text-zinc-200 text-sm lg:text-md">
@@ -463,7 +463,7 @@ export default function Home() {
             </button>
           </div>
           {isLoading && (
-            <div className="w-full h-full  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
+            <div className="w-full min-h-screen  z-50 right-0 text-center mt-10 md:mt-40 text-zinc-200">
               <Image
                 src="/logo_merah.png"
                 width={100}
