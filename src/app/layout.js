@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
-import AnimatePage from "@/components/AnimatePage/AnimatePage";
+import AnimatePage from "../components/AnimatePage/AnimatePage";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 

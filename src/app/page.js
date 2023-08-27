@@ -55,6 +55,9 @@ export default function Home() {
     getGallery();
   }, [activeButton]);
 
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading...</div>;
+
   return (
     <>
       {/* Header */}
