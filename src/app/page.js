@@ -22,7 +22,7 @@ export default function Home() {
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-  const { data, error } = useSWR("/api/services", fetcher);
+  const { data, error } = useSWR(`/api/services`, fetcher);
 
   useEffect(() => {}, [data]);
 
@@ -319,16 +319,16 @@ export default function Home() {
       <section className="bg-white">
         <div className="w-full h-full lg:min-h-screen px-4 lg:px-8 py-24 lg:py-32 relative z-auto">
           <div className="w-full h-full">
-            <span className="text-zinc-500 text-[18px]">02 — Our Services</span>
+            <span className="text-zinc-500 text-[18px]">02 — Our Projects</span>
             <p className=" text-[24px] md:text-[28px] lg:text-[36px] text-zinc-500 w-full lg:w-[75%] pt-4">
               As a tight-knit team of experts, we create memorable and emotional
               event, production, and branding.
             </p>
           </div>
           <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-white text-center pt-12">
-            {data.map((service, i) => (
+            {data?.map((service, i) => (
               <Link
-                href={`/services/${service?._id.toString()}`}
+                href={`/projects/${service?._id.toString()}`}
                 className="group"
                 key={i}
               >

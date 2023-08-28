@@ -22,7 +22,7 @@ const NavMobile = ({ open, setOpen, openForm, setOpenForm }) => {
           </li>
           <li>
             <button onClick={() => setOpen(false)} >
-              <Link href="/services">Services</Link>
+              <Link href="/projects">Projects</Link>
             </button>
           </li>
           <li>
