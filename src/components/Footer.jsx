@@ -3,29 +3,35 @@ import Link from 'next/link'
 import React from 'react'
 import { ImFacebook2 } from "react-icons/im";
 import { GrInstagram } from "react-icons/gr";
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok, FaPhoneSquareAlt } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { BiSolidMap } from "react-icons/bi";
 
 const Footer = () => {
   return (
     <footer className="w-full relative z-50 flex flex-col  gap-0  items-center justify-between ">
       <div className="footer bg-[#161616] py-12 lg:py-20 p-8 text-base-content">
         <div className="flex flex-col">
-          <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover mx-auto' />
+          <Image src="/logo.png" alt='logo_aplus' width={100} height={100} className='object-cover ' />
           <p className="w-full max-w-sm text-justify text-zinc-400">
             Aplus Multi Kreasi are a creative agency in the marketing spehere that focuses on Event, Production and Branding.
           </p>
         </div>
         <div className=''>
-          <span className=" text-zinc-200 font-semibold">Services</span>
-          <Link href="/about" passHref={true} className="text-zinc-400 link link-hover">
-            Events
-          </Link>
-          <Link href="/about" passHref={true} className="text-zinc-400 link link-hover">
-            Production
-          </Link>
-          <Link href="/about" passHref={true} className="text-zinc-400 link link-hover">
-            Branding
-          </Link>
+          <span className=" text-zinc-200 font-semibold mb-2">Support</span>
+
+          <div className='flex gap-2 items-center text-zinc-400'>
+            <FaPhoneSquareAlt size={20} />
+            <span>081214707415</span>
+          </div>
+          <div className='flex gap-2 items-center text-zinc-400'>
+            <AiOutlineMail size={20} />
+            <span>aplusmultikreasi@gmail.com</span>
+          </div>
+          <div className='flex gap-2 items-center text-zinc-400'>
+            <BiSolidMap size={20} />
+            <span>Jl. Sariwangi 165, Parongpong - <br /> Kabupaten Bandung Barat 40559</span>
+          </div>
 
         </div>
         <div className=''>

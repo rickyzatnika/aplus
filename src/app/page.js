@@ -36,7 +36,7 @@ export default function Home() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=10`,
+          `${process.env.NEXT_PUBLIC_API_URI}/v1_1/${cloudName}/resources/image?type=upload&prefix=photo/aplus/${activeButton}&max_results=9`,
           {
             headers: {
               Authorization: `Basic ${auth}`,
@@ -582,6 +582,17 @@ export default function Home() {
               </>
             )}
           </div>
+          <Link href="/portfolio">
+            <button
+              className={`mx-auto flex items-center justify-center group hover:border-[#fd1313] transition-all text-sm  hover:text-[#fd1313] duration-200 ease-linear py-2 px-12 md:px-5 w-fit relative  bg-[#121212] border ${
+                !activeButton === ""
+                  ? " border-[#ff5050] text-[#ff5050] "
+                  : " border-zinc-600 text-zinc-500/80 w-fit"
+              }`}
+            >
+              more photos
+            </button>
+          </Link>
         </div>
       </section>
     </>
