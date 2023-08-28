@@ -206,7 +206,7 @@ const Portfolio = () => {
                       href={g.secure_url}
                       passHref
                       prefetch={true}
-                      data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
+                      data-sub-html={`<h4>© APLUS MULTI KREASI - INSPIRING PARTNER </h4> <p class="date"> ${moment(
                         g.created_at
                       )
                         .startOf("hour")
@@ -240,7 +240,7 @@ const Portfolio = () => {
                       href={g.secure_url}
                       passHref
                       prefetch={true}
-                      data-sub-html={`<h4>© APLUS MEDIA KREASI </h4> <p class="date"> ${moment(
+                      data-sub-html={`<h4>© APLUS MULTI KREASI - INSPIRING PARTNER </h4> <p class="date"> ${moment(
                         g.created_at
                       )
                         .startOf("hour")
