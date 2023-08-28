@@ -374,7 +374,7 @@ export default function Home() {
             ))}
           </div>
           <div className="w-fit mx-auto mt-8 ">
-            <Link href="/services">
+            <Link href="/projects">
               <button className="border border-zinc-600  px-12 flex items-center justify-center py-2">
                 see more
               </button>
